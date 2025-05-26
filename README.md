@@ -16,7 +16,6 @@ For more details, please refer to the project page with dataset exploration and 
   - [📖 Outlines](#-outlines)
   - [🔔 News](#-news)
   - [📝 About PhyX](#-about-phyx)
-  - [🏆 Leaderboard](#-leaderboard)
   - [🔮 Usage](#-usage)
     - [Evaluation on PhyX](#evaluation-on-phyx)
   - [✅ Cite](#-cite)
@@ -50,9 +49,6 @@ PhyX consists of 3,000 visually grounded physics questions, carefully curated ac
 Data examples:
 
 ![Sample](assets/data_sample.png)
-
-## 🏆 Leaderboard
-
 
 ## 🔮 Usage
 
