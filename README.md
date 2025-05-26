@@ -120,7 +120,7 @@ After running the evaluation, results will be saved in the `outputs` folder.
 ## ✅ Cite
 If you find **PhyX** useful for your your research and applications, please kindly cite using this BibTeX:
 
-```latex
+```bibtex
 @misc{shen2025phyxdoesmodelwits,
       title={PhyX: Does Your Model Have the "Wits" for Physical Reasoning?}, 
       author={Hui Shen and Taiqiang Wu and Qi Han and Yunta Hsieh and Jizhou Wang and Yuyue Zhang and Yuxin Cheng and Zijian Hao and Yuansheng Ni and Xin Wang and Zhongwei Wan and Kai Zhang and Wendong Xu and Jing Xiong and Ping Luo and Wenhu Chen and Chaofan Tao and Zhuoqing Mao and Ngai Wong},
