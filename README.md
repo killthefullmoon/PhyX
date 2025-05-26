@@ -77,8 +77,7 @@ The former one would employ the DeepSeek-V3 provied by SiliconFlow and latter on
 
 Alternatively, you can perform rule-based judgment, which is free.
 
-To evaluate a VLM on PhyX, simply use `run.sh`:
-
+To evaluate a VLM on PhyX, please refer to the examples in `examples/MLLM/`, such as:
 
 ```
 #*********judge based on rules*********
@@ -116,6 +115,8 @@ Details for these parameters:
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
 - `--valid_type`: Judgment method — `LLM` for LLM-based evaluation or `STR` for rule-based matching.
 - `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com").
+
+If you want to evaluate in text only mode, please set `PHYX_TEXT_ONLY=true`.
 
 After running the evaluation, results will be saved in the `outputs` folder.
 

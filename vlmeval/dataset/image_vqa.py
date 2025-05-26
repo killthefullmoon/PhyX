@@ -2219,7 +2219,9 @@ class PhyX(ImageBaseDataset):
         question = line['question']
 
         msgs = []
-        if "TL" in self.dataset_name:
+        text_only = os.getenv("PHYX_TEXT_ONLY", "false").lower() == "true"
+        # if "TL" in self.dataset_name:
+        if text_only:
             pass # pure text, do not load image
         else:
             if isinstance(tgt_path, list):
