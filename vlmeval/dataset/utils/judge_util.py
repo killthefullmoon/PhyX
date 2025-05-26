@@ -23,14 +23,15 @@ def build_judge(**kwargs):
             'gpt-4o-mini': 'gpt-4o-mini-2024-07-18',
             'qwen-7b': 'Qwen/Qwen2.5-7B-Instruct',
             'qwen-72b': 'Qwen/Qwen2.5-72B-Instruct',
-            'deepseek': 'deepseek-ai/DeepSeek-V3',
+            'deepseek-v3-si': 'deepseek-ai/DeepSeek-V3',
+            'deepseek-v3': 'deepseek-chat', #! official
             'llama31-8b': 'meta-llama/Llama-3.1-8B-Instruct',
         }
         model_version = model_map[model]
     else:
         model_version = LOCAL_LLM
 
-    if model in ['qwen-7b', 'qwen-72b', 'deepseek']:
+    if model in ['qwen-7b', 'qwen-72b', 'deepseek-v3-si']:
         model = SiliconFlowAPI(model_version, **kwargs)
     elif model == 'llama31-8b':
         model = HFChatModel(model_version, **kwargs)

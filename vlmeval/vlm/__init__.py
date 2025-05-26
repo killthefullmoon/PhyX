@@ -65,7 +65,7 @@ from .video_llm import (
     VideoChat2_HD,
     PLLaVA,
 )
-from .vila import VILA
+from .vila import VILA, NVILA
 from .ovis import Ovis, Ovis1_6, Ovis1_6_Plus, Ovis2
 from .mantis import Mantis
 from .mixsense import LLama3Mixsense
@@ -95,3 +95,4 @@ from .aki import AKI
 from .ristretto import Ristretto
 from .vlaa_thinker import VLAAThinkerChat
 from .kimi_vl import KimiVL
+from .wethink_vl import WeThinkVL

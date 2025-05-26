@@ -1,11 +1,21 @@
 # PhyX: Does Your Model Have the "Wits" for Physical Reasoning?
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
+![Reasoning](https://img.shields.io/badge/Task-Reasoning-red) 
+![Multi-Modal](https://img.shields.io/badge/Task-Multi--Modal-red) 
+![PhyX](https://img.shields.io/badge/Dataset-PhyX-blue)  
+![Claude3.7-Sonnet](https://img.shields.io/badge/Model-Claude3.7--Sonnet-green) 
+![GPT-o4-mini](https://img.shields.io/badge/Model-GPT--o4--mini-green) 
+![Intern-VL](https://img.shields.io/badge/Model-Intern--VL-green)
+![Kimi-VL](https://img.shields.io/badge/Model-Kimi--VL-green)
+![MiniCPM](https://img.shields.io/badge/Model-MiniCPM-green)
+![DeepSeek-R1](https://img.shields.io/badge/Model-DeepSeek--R1-green)
+
 Code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
 
-For more details, please refer to the project page with dataset exploration and visualization tools: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
+For more details, please refer to the project page with **dataset exploration and visualization tools**: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
 
-[[🌐 Project Page](https://phyx-bench.github.io/)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
+[[🌐 Project Page](https://phyx-bench.github.io/)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]  [[🌐 Blog (中文) (TBD)](https://github.com/NastyMarcus/PhyX)]
 
 <p align="center">
     <img src="assets/PhyX_Logo.png" width="20%"> <br>
@@ -54,29 +64,42 @@ Data examples:
 
 ### Evaluation on PhyX
 
-The evaluation code is implemented based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit ), and we thank the authors for their efforts.
+The evaluation code is implemented based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), and we thank the authors for their efforts.
 
 Please follow the [official readme](README_vlmeval.md) to create a pip/conda environment.
 
-In this repository, we provide both Multiple-Choice and Open-ended versions of the data in the `LMUData` folder. For additional formats, please visit the [Google Drive link](https://drive.google.com/file/d/1g6amKMcNSEwg5rfQPsryGtcFiaNGkNaH/view?usp=sharing ) to download and extract the files.
+We use DeepSeek-V3 as the LLM-based judger, please set the `SiliconFlow_API_KEY` or `Deepseek_API` to use it.
+The former one would employ the DeepSeek-V3 provied by SiliconFlow and latter one for official severs.
 
-We use DeepSeek-V3 as the LLM-based judger. Please set the `SiliconFlow_API_KEY` to use it, or alternatively, you can perform rule-based judgment.
+Alternatively, you can perform rule-based judgment, which is free.
 
-To evaluate a VLM on PhyX, simply run `run.sh`:
-
+To evaluate a VLM on PhyX, please refer to the examples in `examples/MLLM/`, such as:
 
 ```
-cd VLMEvalKit
-
-export OPENAI_API_KEY=
-export LMUData="./LMUData"
-export SiliconFlow_API_KEY=
-
-
-# valid_type: STR, LLM
+#*********judge based on rules*********
 python -u run.py --data PhyX_mini_IMG \
     --model GPT4o_20241120 \
-    --judge deepseek --judge-args '{"valid_type": "LLM"}'
+    --judge-args '{"valid_type": "STR"}'
+
+
+
+#*********deepseek v3 from siliconflow as judger*********
+## export SiliconFlow_API_KEY=
+
+# valid_type: STR or LLM
+python -u run.py --data PhyX_mini_IMG \
+    --model GPT4o_20241120 \
+    --judge deepseek-v3-si --judge-args '{"valid_type": "LLM"}'
+
+
+#*********official deepseek v3 as judger*********
+
+## export Deepseek_API=
+## export OPENAI_API_BASE="https://api.deepseek.com"
+
+python -u run.py --data PhyX_mini_IMG \
+    --model GPT4o_20241120 \
+    --judge deepseek-v3 --judge-args '{"valid_type": "LLM"}'
 
 ```
 
@@ -87,6 +110,9 @@ Details for these parameters:
 - `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC_IMG` for multiple-choice or `PhyX_mini_IMG` for open-ended.
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
 - `--valid_type`: Judgment method — `LLM` for LLM-based evaluation or `STR` for rule-based matching.
+- `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com").
+
+If you want to evaluate in text only mode, please set `PHYX_TEXT_ONLY=true`.
 
 After running the evaluation, results will be saved in the `outputs` folder.
 

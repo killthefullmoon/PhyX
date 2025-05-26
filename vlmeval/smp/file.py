@@ -13,8 +13,6 @@ import multiprocessing as mp
 from .misc import toliststr
 from .vlm import decode_base64_to_image_file
 
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
 
 def decode_img_omni(tup):
     root, im, p = tup

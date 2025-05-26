@@ -80,6 +80,10 @@ class OpenAIWrapper(BaseAPI):
             env_key = os.environ.get('XAI_API_KEY', '')
             if key is None:
                 key = env_key
+        elif 'deepseek' in model:
+            env_key = os.environ.get('Deepseek_API', '')
+            if key is None:
+                key = env_key
         else:
             if use_azure:
                 env_key = os.environ.get('AZURE_OPENAI_API_KEY', None)
@@ -200,6 +204,7 @@ class OpenAIWrapper(BaseAPI):
             n=1,
             temperature=temperature,
             **kwargs)
+
         if self.o1_model:
             payload['max_completion_tokens'] = max_tokens
             payload.pop('temperature')

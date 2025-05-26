@@ -225,22 +225,13 @@ api_models = {
     ),
     # Gemini
     "GeminiPro1-0": partial(
-        GeminiProVision, model="gemini-1.0-pro", temperature=0, retry=10
+        Gemini, model="gemini-1.0-pro", temperature=0, retry=10
     ),  # now GeminiPro1-0 is only supported by vertex backend
     "GeminiPro1-5": partial(
-        GeminiProVision, model="gemini-1.5-pro", temperature=0, retry=10
+        Gemini, model="gemini-1.5-pro", temperature=0, retry=10
     ),
     "GeminiFlash1-5": partial(
-        GeminiProVision, model="gemini-1.5-flash", temperature=0, retry=10
-    ),
-    "GeminiFlash2-0": partial(
-        GeminiProVision, model="gemini-2.0-flash", temperature=0, retry=10
-    ),
-    "GeminiPro2-0": partial(
-        GeminiProVision, model="gemini-2.0-pro-exp", temperature=0, retry=10
-    ),
-    "GeminiPro2-5": partial(
-        GeminiProVision, model="gemini-2.5-pro-exp-03-25", temperature=0, retry=10
+        Gemini, model="gemini-1.5-flash", temperature=0, retry=10
     ),
     "GeminiPro1-5-002": partial(
         GPT4V, model="gemini-1.5-pro-002", temperature=0, retry=10
@@ -248,9 +239,36 @@ api_models = {
     "GeminiFlash1-5-002": partial(
         GPT4V, model="gemini-1.5-flash-002", temperature=0, retry=10
     ),  # Internal Use Only
+    "GeminiFlash2-0": partial(
+        Gemini, model="gemini-2.0-flash", temperature=0, retry=10
+    ),
+    "GeminiFlashLite2-0": partial(
+        Gemini, model="gemini-2.0-flash-lite", temperature=0, retry=10
+    ),
+    "GeminiPro2-0": partial(
+        Gemini, model="gemini-2.0-pro-exp", temperature=0, retry=10
+    ),
+    "GeminiFlash2-5": partial(
+        Gemini, model="gemini-2.5-flash-preview-04-17", temperature=0, retry=10
+    ),
+    "GeminiPro2-5": partial(
+        Gemini, model="gemini-2.5-pro-preview-03-25", temperature=0, retry=10
+    ),
+    "GeminiPro2-5-Thinking": partial(
+        Gemini, model="gemini-2.5-pro-preview-03-25", temperature=0, retry=10, thinking_budget=24576
+    ),
+    "GeminiPro2-5-0506": partial(
+        Gemini, model="gemini-2.5-pro-preview-05-06", temperature=0, retry=10
+    ),
+    "GeminiPro2-5-0506-Thinking": partial(
+        Gemini, model="gemini-2.5-pro-preview-05-06", temperature=0, retry=10, thinking_budget=24576
+    ),
+    
     # Qwen-VL
     "QwenVLPlus": partial(QwenVLAPI, model="qwen-vl-plus", temperature=0, retry=10),
     "QwenVLMax": partial(QwenVLAPI, model="qwen-vl-max", temperature=0, retry=10),
+    "QwenVLMax-250408": partial(QwenVLAPI, model="qwen-vl-max-2025-04-08", temperature=0, retry=10),
+
     # Reka
     "RekaEdge": partial(Reka, model="reka-edge-20240208"),
     "RekaFlash": partial(Reka, model="reka-flash-20240226"),
@@ -352,10 +370,14 @@ api_models = {
         retry=10,
     ),
     # CongRong
-    "CloudWalk": partial(CWWrapper, model="cw-congrong-v1.5", temperature=0, retry=10),
-    # SenseChat-V
-    "SenseChat-Vision": partial(
-        SenseChatVisionAPI, model="SenseChat-Vision", temperature=0, retry=10
+    "CongRong-v1.5": partial(CWWrapper, model="cw-congrong-v1.5", temperature=0, retry=10),
+    "CongRong-v2.0": partial(CWWrapper, model="cw-congrong-v2.0", temperature=0, retry=10),
+    # SenseNova
+    "SenseNova-V6-Pro": partial(
+        SenseChatVisionAPI, model="SenseNova-V6-Pro", temperature=0, retry=10
+    ),
+    "SenseNova-V6-Reasoner": partial(
+        SenseChatVisionAPI, model="SenseNova-V6-Reasoner", temperature=0, retry=10
     ),
     "HunYuan-Vision": partial(
         HunyuanVision, model="hunyuan-vision", temperature=0, retry=10
@@ -416,6 +438,9 @@ api_models = {
     # doubao_vl
     "DoubaoVL": partial(
         DoubaoVL, model="Doubao-1.5-vision-pro", temperature=0, retry=10, verbose=False
+    ),
+    "Seed1.5-VL": partial(
+        DoubaoVL, model="doubao-1-5-thinking-vision-pro-250428", temperature=0, retry=10, verbose=False
     ),
     # Shopee MUG-U
     'MUG-U-7B': partial(
@@ -692,6 +717,9 @@ internvl2_5 = {
     "InternVL2_5-2B": partial(
         InternVLChat, model_path="OpenGVLab/InternVL2_5-2B", version="V2.0"
     ),
+    "QTuneVL1-2B": partial(
+        InternVLChat, model_path="hanchaow/QTuneVL1-2B", version="V2.0"
+    ),
     "InternVL2_5-4B": partial(
         InternVLChat, model_path="OpenGVLab/InternVL2_5-4B", version="V2.0"
     ),
@@ -767,7 +795,7 @@ internvl3 = {
         InternVLChat, model_path="OpenGVLab/InternVL3-2B", version="V2.0"
     ),
     "InternVL3-8B": partial(
-        InternVLChat, model_path="OpenGVLab/InternVL3-8B", version="V2.0"
+        InternVLChat, model_path="OpenGVLab/InternVL3-8B", version="V2.0", use_lmdeploy=True
     ),
     "InternVL3-9B": partial(
         InternVLChat, model_path="OpenGVLab/InternVL3-9B", version="V2.0"
@@ -784,7 +812,10 @@ internvl3 = {
 }
 
 sail_series = {
-    "SAIL-VL-2B": partial(SailVL, model_path="BytedanceDouyinContent/SAIL-VL-2B")
+    "SAIL-VL-2B": partial(SailVL, model_path="BytedanceDouyinContent/SAIL-VL-2B"),
+    "SAIL-VL-1.5-2B": partial(SailVL, model_path="BytedanceDouyinContent/SAIL-VL-1d5-2B", use_msac = True),
+    "SAIL-VL-1.5-8B": partial(SailVL, model_path="BytedanceDouyinContent/SAIL-VL-1d5-8B", use_msac = True),
+    "SAIL-VL-1.6-8B": partial(SailVL, model_path="BytedanceDouyinContent/SAIL-VL-1d6-8B", use_msac = True)
 }
 
 ristretto_series = {
@@ -870,6 +901,7 @@ deepseekvl2_series = {
 
 janus_series = {
     "Janus-1.3B": partial(Janus, model_path="deepseek-ai/Janus-1.3B"),
+    "Janus-Pro-1B": partial(Janus, model_path="deepseek-ai/Janus-Pro-1B"),
     "Janus-Pro-7B": partial(Janus, model_path="deepseek-ai/Janus-Pro-7B"),
 }
 
@@ -910,6 +942,8 @@ vila_series = {
     ),
     "VILA1.5-13b": partial(VILA, model_path="Efficient-Large-Model/VILA1.5-13b"),
     "VILA1.5-40b": partial(VILA, model_path="Efficient-Large-Model/VILA1.5-40b"),
+    "NVILA-8B": partial(NVILA, model_path="Efficient-Large-Model/NVILA-8B"),
+    "NVILA-15B": partial(NVILA, model_path="Efficient-Large-Model/NVILA-15B"),
 }
 
 ovis_series = {
@@ -1092,6 +1126,22 @@ qwen2vl_series = {
         max_pixels=16384 * 28 * 28,
         use_custom_prompt=False,
     ),
+    "Qwen2.5-Omni-7B-ForVideo": partial(
+        Qwen2VLChat,
+        model_path="Qwen/Qwen2.5-Omni-7B",
+        min_pixels=128 * 28 * 28,
+        max_pixels=768 * 28 * 28,
+        total_pixels=24576 * 28 * 28,
+        use_custom_prompt=False,
+        use_audio_in_video=True, # set use audio in video
+    ),
+    "Qwen2.5-Omni-7B": partial(
+        Qwen2VLChat,
+        model_path="Qwen/Qwen2.5-Omni-7B",
+        min_pixels=1280 * 28 * 28,
+        max_pixels=16384 * 28 * 28,
+        use_custom_prompt=False,
+    ),
     'VLM-R1': partial(
         VLMR1Chat, 
         model_path='omlab/VLM-R1-Qwen2.5VL-3B-Math-0305', 
@@ -1129,6 +1179,15 @@ qwen2vl_series = {
                     "<answer> </answer> tags, respectively, i.e., <think> reasoning process here </think>"
                     "<answer> answer here </answer>"
                 ),
+    ),
+    'WeThink-Qwen2.5VL-7B': partial(
+        WeThinkVL, 
+        model_path='yangjie-cv/WeThink-Qwen2.5VL-7B', 
+        min_pixels=1280*28*28, 
+        max_pixels=16384*28*28, 
+        use_custom_prompt=False,
+        system_prompt=("You FIRST think about the reasoning process as an internal monologue and then provide the final answer.\nThe reasoning process MUST BE enclosed within <think> </think> tags. The final answer MUST BE enclosed within <answer> </answer> tags."
+        ),
     ),
 }
 

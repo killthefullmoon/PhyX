@@ -194,7 +194,6 @@ apple.jpg
 assets/LOGO.png
 api_list.txt
 vlmeval/gemini_tmp.py
-run.sh
 
 
 #! by taiqiang
@@ -203,4 +202,4 @@ test.sh
 log.out
 logs/
 logs
-LMUData/*.tsv
+test_api.py
