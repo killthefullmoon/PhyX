@@ -1,11 +1,21 @@
 # PhyX: Does Your Model Have the "Wits" for Physical Reasoning?
 <h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
+![Reasoning](https://img.shields.io/badge/Task-Reasoning-red) 
+![Multi-Modal](https://img.shields.io/badge/Task-Multi--Modal-red) 
+![PhyX](https://img.shields.io/badge/Dataset-PhyX-blue)  
+![Claude3.7-Sonnet](https://img.shields.io/badge/Model-Claude3.7--Sonnet-green) 
+![GPT-o4-mini](https://img.shields.io/badge/Model-GPT--o4--mini-green) 
+![Intern-VL](https://img.shields.io/badge/Model-Intern--VL-green)
+![Kimi-VL](https://img.shields.io/badge/Model-Kimi--VL-green)
+![MiniCPM](https://img.shields.io/badge/Model-MiniCPM-green)
+![DeepSeek-R1](https://img.shields.io/badge/Model-DeepSeek--R1-green)
+
 Code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
 
-For more details, please refer to the project page with dataset exploration and visualization tools: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
+For more details, please refer to the project page with **dataset exploration and visualization tools**: [https://phyx-bench.github.io/](https://phyx-bench.github.io/).
 
-[[🌐 Project Page](https://phyx-bench.github.io/)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]
+[[🌐 Project Page](https://phyx-bench.github.io/)] [[📖 Paper](https://arxiv.org/abs/2505.15929)] [[🤗 Huggingface Dataset](https://huggingface.co/datasets/Cloudriver/PhyX)]  [[🌐 Blog (中文) (TBD)](https://github.com/NastyMarcus/PhyX)]
 
 <p align="center">
     <img src="assets/PhyX_Logo.png" width="20%"> <br>
