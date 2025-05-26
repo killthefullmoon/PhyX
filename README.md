@@ -10,7 +10,6 @@
 ![Kimi-VL](https://img.shields.io/badge/Model-Kimi--VL-green)
 ![MiniCPM](https://img.shields.io/badge/Model-MiniCPM-green)
 ![DeepSeek-R1](https://img.shields.io/badge/Model-DeepSeek--R1-green)
-![DeepSeek-V3](https://img.shields.io/badge/Model-DeepSeek--V3-green)
 
 Code for the paper "[PhyX: Does Your Model Have the "Wits" for Physical Reasoning?](https://huggingface.co/datasets/Cloudriver/PhyX)".
 
