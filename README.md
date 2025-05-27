@@ -119,7 +119,7 @@ PhyX is officially supported by [VLMEvalKit](https://github.com/open-compass/VLM
 You can use the official code at https://github.com/open-compass/VLMEvalKit.
 Please follow the official guidance to create a pip/conda environment.
 
-For quick start, just use:
+For a quick start, just use:
 ```
 #*********judge based on rules*********
 python -u run.py --data PhyX_mini_SIMPLY \
@@ -139,12 +139,12 @@ Also, in this repository, we implement more evaluation settings. The evaluation 
 Please follow the [readme](README_vlmeval.md) to create a pip/conda environment.
 
 
-We use DeepSeek-V3 as the LLM-based judger, and we add support for official API. 
+We use DeepSeek-V3 as the LLM-based judger, and we add support for the official API. 
 Please set the `SiliconFlow_API_KEY` or `Deepseek_API` to use it.
-The former one would employ the DeepSeek-V3 provied by SiliconFlow and latter one for official severs.
+The former one would employ the DeepSeek-V3 provided by SiliconFlow, and the latter one would be for official servers.
 
 Alternatively, you can perform rule-based judgment, which is **free**. 
-We carefully design rules to extract the answer from outputs and then compare it with ground truth.
+We carefully design rules to extract the answer from outputs and then compare it with the ground truth.
 
 To evaluate a VLM on PhyX, please refer to the examples in `examples/MLLM/`, such as:
 
@@ -185,14 +185,14 @@ Details for these parameters:
 - `--valid_type`: Judgment method — `LLM` for LLM-based evaluation or `STR` for rule-based matching.
 - `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com").
 
-If you want to evaluate in text only mode, please refer to examples in `examples/LLM_textonly/`, where we add an extra environment variable `PHYX_TEXT_ONLY=true`.
+If you want to evaluate in text-only mode, please refer to examples in `examples/LLM_textonly/`, where we add an extra environment variable `PHYX_TEXT_ONLY=true`.
 
 
 After evaluation, results will be saved in the `outputs` folder.
 
 
 ## ✅ Cite
-If you find **PhyX** useful for your your research and applications, please kindly cite using this BibTeX:
+If you find **PhyX** useful for your research and applications, please kindly cite using this BibTeX:
 
 ```bibtex
 @misc{shen2025phyxdoesmodelwits,
