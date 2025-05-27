@@ -29,6 +29,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [📝 About PhyX](#-about-phyx)
   - [🔮 Usage](#-usage)
     - [Dataset Versions](#dataset-versions)
+    - [📦 Dataset Versions](#-dataset-versions)
     - [Sample Format and Field Definitions](#sample-format-and-field-definitions)
     - [Evaluation on PhyX](#evaluation-on-phyx)
   - [✅ Cite](#-cite)
@@ -68,20 +69,26 @@ Data examples:
 
 ### Dataset Versions
 PhyX contains two subsets: testmini (1,000 questions) and test (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
-| File Name                      | Description                                                                 |
-|-------------------------------|-----------------------------------------------------------------------------|
-| `PhyX_mini.tsv`               | Open-ended (OE) questions with full original text and image                 |
-| `PhyX_mini_MC.tsv`            | Multiple-choice (MC) version with original description and image            |
-| `PhyX_mini_SIMPLY.tsv`        | OE version with simplified description                                      |
-| `PhyX_mini_MC_SIMPLY.tsv`     | MC version with simplified description                                      |
-| `PhyX_mini_IMG.tsv`           | OE version with image only (no description)                                 |
-| `PhyX_mini_MC_IMG.tsv`        | MC version with image only                                                  |
-| `PhyX_mini_TL.tsv`            | OE version with image converted to text (`image_caption` only)              |
-| `PhyX_mini_TL_MC.tsv`         | MC version with text-only format                                            |
-| `PhyX_mini_TL_SIMPLY.tsv`     | OE text-only version with simplified description                            |
-| `PhyX_mini_TL_MC_SIMPLY.tsv`  | MC text-only version with simplified description                            |
-| `PhyX_mini_TL_IMG.tsv`        | OE version with image converted to text and no original description         |
-| `PhyX_mini_TL_MC_IMG.tsv`     | MC version with image converted to text and no original description         |
+### 📦 Dataset Versions
+
+PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
+
+| File Name                      | Question Type | Input Style         | Description                                                                 |
+|-------------------------------|----------------|----------------------|-----------------------------------------------------------------------------|
+| `PhyX_mini.tsv`               | OE             | Full-Text           | Open-ended questions with full original description and image               |
+| `PhyX_mini_MC.tsv`            | MC             | Full-Text           | Multiple-choice version with original description and image                 |
+| `PhyX_mini_SIMPLY.tsv`        | OE             | Text-DeRedundancy   | OE version with simplified description                                      |
+| `PhyX_mini_MC_SIMPLY.tsv`     | MC             | Text-DeRedundancy   | MC version with simplified description                                      |
+| `PhyX_mini_IMG.tsv`           | OE             | Text-Minimal        | OE version with image only (description removed)                            |
+| `PhyX_mini_MC_IMG.tsv`        | MC             | Text-Minimal        | MC version with image only                                                  |
+| `PhyX_mini_TL.tsv`            | OE             | Full-Text           | OE version with image converted to text (`image_caption`)                   |
+| `PhyX_mini_TL_MC.tsv`         | MC             | Full-Text           | MC version with image converted to text                                     |
+| `PhyX_mini_TL_SIMPLY.tsv`     | OE             | Text-DeRedundancy   | OE version with image caption and simplified description                    |
+| `PhyX_mini_TL_MC_SIMPLY.tsv`  | MC             | Text-DeRedundancy   | MC version with image caption and simplified description                    |
+| `PhyX_mini_TL_IMG.tsv`        | OE             | Text-Minimal        | OE version with image caption only (no description)                         |
+| `PhyX_mini_TL_MC_IMG.tsv`     | MC             | Text-Minimal        | MC version with image caption only (no description)                         |
+| **Default Setting**           | —              | —                   | ✅ `PhyX_mini_SIMPLY.tsv` (Text-DeRedundancy, OE)  <br> ✅ `PhyX_mini_MC_SIMPLY.tsv` (Text-DeRedundancy, MC) |
+
 
 - 🔍 mini stands for the 1,000-questions testmini set; the full version with 3,000 samples will be released soon.
 - MC: multiple-choice
