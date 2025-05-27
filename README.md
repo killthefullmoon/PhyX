@@ -107,6 +107,7 @@ PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questi
 | `category`       | string   | Physics category (e.g., `"Optics"`)                                         |
 | `subfield`       | string   | Fine-grained physics subfield (e.g., `"Geometrical Optics"`)                                         |
 | `reasoning_type`  | string   | Type(s) of Physical Reasoning                |
+
 You can use this format to load and evaluate different question versions based on your model’s capability (e.g., multimodal, text-only).
 
 
