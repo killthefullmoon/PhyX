@@ -2206,6 +2206,20 @@ class PhyX(ImageBaseDataset):
         'PhyX_mini_TL_MC_SIMPLY': '7196d2bd1c50337bc253d642c4415852', # noqa
         'PhyX_mini_TL_SIMPLY': 'a6e83fc38abdfadf5a791f00a0348fa3', # noqa
     }
+    # DATASET_MD5 = {
+    #     'PhyX_mini_TL_MC': '4061a034d5735ca12cfcbc56c85b71ec',
+    #     'PhyX_mini_MC': 'bcc65a08428d7b2e02b7677d9d63c9c5',
+    #     'PhyX_mini_IMG': 'fce935141b5c01ed942947927e152e76',
+    #     'PhyX_mini_MC_IMG': '2ff170ed15a04541e2443076ef6784ff',
+    #     'PhyX_mini': '91e62bee552e184aabc090ca30fc8048',
+    #     'PhyX_mini_MC_SIMPLY': '2bfa1602300f93bc06552109817db4e0',
+    #     'PhyX_mini_TL': '604c537941fd8725ebde602db2a78e0d',
+    #     'PhyX_mini_TL_MC_SIMPLY': 'e25869fc799745ec29f151fd3efa5ba8',
+    #     'PhyX_mini_TL_IMG': '5b003de4960936a808b1bb75cf4818ec',
+    #     'PhyX_mini_TL_MC_IMG': '2ed3bfec25060741672ca36463dc72dd',
+    #     'PhyX_mini_SIMPLY': 'ac396d5bf4ec8a363e774879a1662671',
+    #     'PhyX_mini_TL_SIMPLY': '265e4cf976ef4766d3bad4a5de45baf0',
+    # }
     # Given one data record, return the built prompt (a multi-modal message), can override
     def build_prompt(self, line):
         if isinstance(line, int):
