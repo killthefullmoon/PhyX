@@ -33,6 +33,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [❤️ Contributors](#️-contributors)
 
 ## 🔔 News
+- **[2025.05.27]** 🎉 PhyX is officially supported by [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for easy evalution.
 - **[2025.05.23]** 🚀 The [arXiv paper](https://arxiv.org/abs/2505.15929) is online!
 - **[2025.05.21]** 🚀 We release the testmini set of PhyX at [Huggingface](https://huggingface.co/datasets/Cloudriver/PhyX) and the [evaluation code](https://github.com/NastyMarcus/PhyX)!
 
