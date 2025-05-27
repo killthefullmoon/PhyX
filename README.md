@@ -87,7 +87,7 @@ PhyX contains two subsets: testmini (1,000 questions) and test (3,000 questions)
 - no MC: open-ended (OE)
 - SIMPLY: simplified descriptions
 - TL: text-only (image converted to image_caption)
-- IMG: description removed (image only)
+- IMG: description removed (image + question, without description)
 
 ### Evaluation on PhyX
 
