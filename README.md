@@ -29,6 +29,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [📝 About PhyX](#-about-phyx)
   - [🔮 Usage](#-usage)
     - [Dataset Versions](#dataset-versions)
+    - [Sample Format and Field Definitions](#sample-format-and-field-definitions)
     - [Evaluation on PhyX](#evaluation-on-phyx)
   - [✅ Cite](#-cite)
   - [❤️ Contributors](#️-contributors)
@@ -88,6 +89,24 @@ PhyX contains two subsets: testmini (1,000 questions) and test (3,000 questions)
 - SIMPLY: simplified descriptions
 - TL: text-only (image converted to image_caption)
 - IMG: description removed (image + question, without description)
+
+### Sample Format and Field Definitions
+📘 Each entry in PhyX is stored as a JSON object with the following fields:
+| Field             | Type     | Description                                                                 |
+|------------------|----------|-----------------------------------------------------------------------------|
+| `index`          | int      | Index of the question                                                       |
+| `question`       | string   | Question                                                            |
+| `question_description`    | string   | Original full description of the problem  |
+| `question_simply`| string   | Simplified version of the question description (used in `SIMPLY` versions)  |
+| `options`        | string   | Answer options, format: `A:"...", B:"...", ...`       |
+| `answer`         | string   | Ground truth answer                            |
+| `image`          | string   | Image filename (e.g., `200.png`)                                 |
+| `image_caption`  | string   | Textual description of the image (only in `TL` versions)                    |
+| `category`       | string   | Physics category (e.g., `"Optics"`)                                         |
+| `subfield`       | string   | Fine-grained physics subfield (e.g., `"Geometrical Optics"`)                                         |
+| `reasoning_type`  | string   | Type(s) of Physical Reasoning                |
+You can use this format to load and evaluate different question versions based on your model’s capability (e.g., multimodal, text-only).
+
 
 ### Evaluation on PhyX
 
