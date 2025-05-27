@@ -30,6 +30,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [🔮 Usage](#-usage)
     - [Dataset Versions](#dataset-versions)
     - [📦 Dataset Versions](#-dataset-versions)
+    - [📦 Dataset Versions](#-dataset-versions-1)
     - [Sample Format and Field Definitions](#sample-format-and-field-definitions)
     - [Evaluation on PhyX](#evaluation-on-phyx)
   - [✅ Cite](#-cite)
@@ -73,22 +74,25 @@ PhyX contains two subsets: testmini (1,000 questions) and test (3,000 questions)
 
 PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
 
-| File Name                      | Question Type | Input Style         | Description                                                                 |
-|-------------------------------|----------------|----------------------|-----------------------------------------------------------------------------|
-| `PhyX_mini.tsv`               | OE             | Full-Text           | Open-ended questions with full original description and image               |
-| `PhyX_mini_MC.tsv`            | MC             | Full-Text           | Multiple-choice version with original description and image                 |
-| `PhyX_mini_SIMPLY.tsv`        | OE             | Text-DeRedundancy   | OE version with simplified description                                      |
-| `PhyX_mini_MC_SIMPLY.tsv`     | MC             | Text-DeRedundancy   | MC version with simplified description                                      |
-| `PhyX_mini_IMG.tsv`           | OE             | Text-Minimal        | OE version with image only (description removed)                            |
-| `PhyX_mini_MC_IMG.tsv`        | MC             | Text-Minimal        | MC version with image only                                                  |
-| `PhyX_mini_TL.tsv`            | OE             | Full-Text           | OE version with image converted to text (`image_caption`)                   |
-| `PhyX_mini_TL_MC.tsv`         | MC             | Full-Text           | MC version with image converted to text                                     |
-| `PhyX_mini_TL_SIMPLY.tsv`     | OE             | Text-DeRedundancy   | OE version with image caption and simplified description                    |
-| `PhyX_mini_TL_MC_SIMPLY.tsv`  | MC             | Text-DeRedundancy   | MC version with image caption and simplified description                    |
-| `PhyX_mini_TL_IMG.tsv`        | OE             | Text-Minimal        | OE version with image caption only (no description)                         |
-| `PhyX_mini_TL_MC_IMG.tsv`     | MC             | Text-Minimal        | MC version with image caption only (no description)                         |
-| **Default Setting**           | —              | —                   | ✅ `PhyX_mini_SIMPLY.tsv` (Text-DeRedundancy, OE)  <br> ✅ `PhyX_mini_MC_SIMPLY.tsv` (Text-DeRedundancy, MC) |
+### 📦 Dataset Versions
 
+PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
+
+| File Name                      | Type & Input Style                              | Description                                                                 |
+|-------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------|
+| `PhyX_mini.tsv`               | OE / Full-Text (Image + Full Description + Question)                               | Open-ended questions with full original description and image               |
+| `PhyX_mini_MC.tsv`            | MC / Full-Text (Image + Full Description + Question)                                 | Multiple-choice version with original description and image                 |
+| `PhyX_mini_SIMPLY.tsv`        | OE / Text-DeRedundancy (Image + Simplified Description + Question)                         | OE version with simplified description                                      |
+| `PhyX_mini_MC_SIMPLY.tsv`     | MC / Text-DeRedundancy (Image + Simplified Description + Question)                        | MC version with simplified description                                      |
+| `PhyX_mini_IMG.tsv`           | OE / Text-Minimal (Image + Question)                              | OE version with image only (description removed)                            |
+| `PhyX_mini_MC_IMG.tsv`        | MC / Text-Minimal (Image + Question)                             | MC version with image only                                                  |
+| `PhyX_mini_TL.tsv`            | OE / Full-Text (Image Caption + Full Description + Question) | OE version with image converted to text (`image_caption`)                   |
+| `PhyX_mini_TL_MC.tsv`         | MC / Full-Text (Image Caption + Full Description + Question) | MC version with image converted to text                                     |
+| `PhyX_mini_TL_SIMPLY.tsv`     | OE / Text-DeRedundancy (Image Caption + Simplified Description + Question)                         | OE version with image caption and simplified description                    |
+| `PhyX_mini_TL_MC_SIMPLY.tsv`  | MC / Text-DeRedundancy (Image Caption + Simplified Description + Question)                         | MC version with image caption and simplified description                    |
+| `PhyX_mini_TL_IMG.tsv`        | OE / Text-Minimal (Image Caption + Question)                              | OE version with image caption only (no description)                         |
+| `PhyX_mini_TL_MC_IMG.tsv`     | MC / Text-Minimal (Image Caption + Question)                              | MC version with image caption only (no description)                         |
+| **Default Setting**           | ✅ Text-DeRedundancy (MC & OE)                  | `PhyX_mini_SIMPLY.tsv` (OE) and `PhyX_mini_MC_SIMPLY.tsv` (MC) are default. |
 
 - 🔍 mini stands for the 1,000-questions testmini set; the full version with 3,000 samples will be released soon.
 - MC: multiple-choice
