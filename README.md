@@ -117,7 +117,7 @@ You can use this format to load and evaluate different question versions based o
 
 PhyX is officially supported by [VLMEvalKit](https://github.com/open-compass/VLMEvalKit).
 You can use the official code at https://github.com/open-compass/VLMEvalKit.
-Please follow the [official readme](README_vlmeval.md) to create a pip/conda environment.
+Please follow the official guidance to create a pip/conda environment.
 
 For quick start, just use:
 ```
@@ -136,7 +136,7 @@ python -u run.py --data PhyX_mini_SIMPLY \
 #### Code in this repository
 
 Also, in this repository, we implement more evaluation settings. The evaluation codes are based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), and we thank the authors for their efforts.
-Please follow the [official readme](README_vlmeval.md) to create a pip/conda environment.
+Please follow the [readme](README_vlmeval.md) to create a pip/conda environment.
 
 
 We use DeepSeek-V3 as the LLM-based judger, and we add support for official API. 
