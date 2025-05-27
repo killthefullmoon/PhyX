@@ -28,9 +28,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [🔔 News](#-news)
   - [📝 About PhyX](#-about-phyx)
   - [🔮 Usage](#-usage)
-    - [Dataset Versions](#dataset-versions)
     - [📦 Dataset Versions](#-dataset-versions)
-    - [📦 Dataset Versions](#-dataset-versions-1)
     - [Sample Format and Field Definitions](#sample-format-and-field-definitions)
     - [Evaluation on PhyX](#evaluation-on-phyx)
   - [✅ Cite](#-cite)
@@ -68,14 +66,7 @@ Data examples:
 
 ## 🔮 Usage
 
-### Dataset Versions
-PhyX contains two subsets: testmini (1,000 questions) and test (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
 ### 📦 Dataset Versions
-
-PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
-
-### 📦 Dataset Versions
-
 PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questions). Each subset includes 12 versions tailored for different evaluation settings:
 
 | File Name                      | Type & Input Style                              | Description                                                                 |
