@@ -116,6 +116,7 @@ You can use this format to load and evaluate different question versions based o
 #### VLMEvalKit (Official)
 
 PhyX is officially supported by [VLMEvalKit](https://github.com/open-compass/VLMEvalKit).
+You can use the official code at https://github.com/open-compass/VLMEvalKit.
 Please follow the [official readme](README_vlmeval.md) to create a pip/conda environment.
 
 For quick start, just use:
