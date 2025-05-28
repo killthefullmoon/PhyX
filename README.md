@@ -148,7 +148,7 @@ We carefully design rules to extract the answer from outputs and then compare it
 
 ##### VLM
 
-To evaluate a VLM on PhyX, please refer to the examples in `examples/MLLM/`, such as:
+To evaluate a VLM on PhyX, please refer to the examples in `examples/VLM/`, such as:
 
 ```
 #*********judge based on rules*********
