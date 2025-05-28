@@ -205,3 +205,4 @@ logs
 test_api.py
 tmp/
 run.sh
+test_api2.py

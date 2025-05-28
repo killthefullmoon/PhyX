@@ -111,7 +111,7 @@ PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questi
 You can use this format to load and evaluate different question versions based on your model’s capability (e.g., multimodal, text-only).
 
 
-### Evaluation on PhyX
+### 🔨 Evaluation on PhyX
 
 #### VLMEvalKit (Official)
 
@@ -146,7 +146,7 @@ The former one would employ the DeepSeek-V3 provided by SiliconFlow, and the lat
 Alternatively, you can perform rule-based judgment, which is **free**. 
 We carefully design rules to extract the answer from outputs and then compare it with the ground truth.
 
-##### VLM
+➡️ VLM
 
 To evaluate a VLM on PhyX, please refer to the examples in `examples/VLM/`, such as:
 
@@ -188,13 +188,13 @@ Details for these parameters:
 - `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com/v1/chat/completions").
 
 
-##### LLM
+➡️ LLM
 
 In this repository, we support more LLMs for evaluation.
 If you want to evaluate on LLM (i.e., in text only setting), please refer to examples in `examples/LLM_textonly/`, where we add an extra environment variable `PHYX_TEXT_ONLY=true`.
 
 
-##### Custom Models
+➡️ Custom Models
 
 To support your custion model, we would suggest to deploy your model as API and then add setting in the `vlmeval/config.py`. 
 It is also avaibale if your model is a tuned version of one supported model.
