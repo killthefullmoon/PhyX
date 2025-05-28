@@ -182,7 +182,7 @@ This example shows how to evaluate `GPT4o_20241120` using DeepSeek-V3 as the jud
 
 Details for these parameters:
 
-- `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC` for multiple-choice or `PhyX_mini` for open-ended.
+- `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC_SIMPLY` for multiple-choice or `PhyX_mini_SIMPLY` for open-ended.
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
 - `--valid_type`: Judgment method — `LLM` for LLM-based evaluation or `STR` for rule-based matching.
 - `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com/v1/chat/completions").
