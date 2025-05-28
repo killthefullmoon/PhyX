@@ -203,3 +203,5 @@ log.out
 logs/
 logs
 test_api.py
+tmp/
+run.sh
