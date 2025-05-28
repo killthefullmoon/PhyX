@@ -30,7 +30,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [🔮 Usage](#-usage)
     - [📦 Dataset Versions](#-dataset-versions)
     - [Sample Format and Field Definitions](#sample-format-and-field-definitions)
-    - [🔨 Evaluation on PhyX](#evaluation-on-phyx)
+    - [🔨 Evaluation on PhyX](#-evaluation-on-phyx)
   - [✅ Cite](#-cite)
   - [❤️ Contributors](#️-contributors)
 
