@@ -16,7 +16,7 @@ class GeminiWrapper(BaseAPI):
                  verbose: bool = True,
                  temperature: float = 0.0,
                  system_prompt: str = None,
-                 max_tokens: int = 2048,
+                 max_tokens: int = 20480,
                  proxy: str = None,
                  backend='genai',
                  project_id='vlmeval',

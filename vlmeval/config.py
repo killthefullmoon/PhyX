@@ -249,7 +249,7 @@ api_models = {
         Gemini, model="gemini-2.0-pro-exp", temperature=0, retry=10
     ),
     "GeminiFlash2-5": partial(
-        Gemini, model="gemini-2.5-flash-preview-04-17", temperature=0, retry=10
+        Gemini, model="gemini-2.5-flash-preview-05-20", temperature=0, retry=10
     ),
     "GeminiPro2-5": partial(
         Gemini, model="gemini-2.5-pro-preview-03-25", temperature=0, retry=10
