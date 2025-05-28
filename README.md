@@ -146,6 +146,8 @@ The former one would employ the DeepSeek-V3 provied by SiliconFlow and latter on
 Alternatively, you can perform rule-based judgment, which is **free**. 
 We carefully design rules to extract the answer from outputs and then compare it with ground truth.
 
+##### VLM
+
 To evaluate a VLM on PhyX, please refer to the examples in `examples/MLLM/`, such as:
 
 ```
@@ -183,9 +185,24 @@ Details for these parameters:
 - `--data`: The dataset configuration to evaluate, e.g., `PhyX_mini_MC` for multiple-choice or `PhyX_mini` for open-ended.
 - `--model`: The model to be evaluated. Please refer to [this link](https://aicarrier.feishu.cn/wiki/Qp7wwSzQ9iK1Y6kNUJVcr6zTnPe?table=tblsdEpLieDoCxtb ) for supported models.
 - `--valid_type`: Judgment method — `LLM` for LLM-based evaluation or `STR` for rule-based matching.
-- `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com").
+- `--judge`: judger,  `deepseek-v3-si` for deepseek-v3 provided by SiliconFlow (set SiliconFlow_API_KEY) while `deepseek-v3` for official (set Deepseek_API and OPENAI_API_BASE="https://api.deepseek.com/v1/chat/completions").
 
-If you want to evaluate in text only mode, please refer to examples in `examples/LLM_textonly/`, where we add an extra environment variable `PHYX_TEXT_ONLY=true`.
+
+##### LLM
+
+In this repository, we support more LLMs for evaluation.
+If you want to evaluate on LLM (i.e., in text only setting), please refer to examples in `examples/LLM_textonly/`, where we add an extra environment variable `PHYX_TEXT_ONLY=true`.
+
+
+##### Custom Models
+
+To support your custion model, we would suggest to deploy your model as API and then add setting in the `vlmeval/config.py`. 
+It is also avaibale if your model is a tuned version of one supported model.
+
+Specifically, you need to add an extra dict for your own setting in `vlmeval/config.py`. 
+
+
+
 
 
 After evaluation, results will be saved in the `outputs` folder.
