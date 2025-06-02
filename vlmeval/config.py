@@ -487,6 +487,14 @@ api_models = {
         temperature=0,
         retry=10,
     ),
+    "deepseek-r1": partial(
+        DeepSeekAPI,
+        model="deepseek-reasoner",
+        temperature=0,
+        retry=20,
+        reasoning=True,
+        max_tokens=32000,
+    ),
 }
 
 emu_series = {
