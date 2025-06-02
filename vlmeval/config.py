@@ -627,6 +627,9 @@ llava_series = {
     "llava_onevision_qwen2_7b_ov": partial(
         LLaVA_OneVision, model_path="lmms-lab/llava-onevision-qwen2-7b-ov"
     ),
+    "llava-onevision-qwen2-7b-ov-chat": partial(
+        LLaVA_OneVision, model_path="lmms-lab/llava-onevision-qwen2-7b-ov-chat"
+    ),
     "llava_onevision_qwen2_72b_ov": partial(
         LLaVA_OneVision, model_path="lmms-lab/llava-onevision-qwen2-72b-ov-sft"
     ),
@@ -1003,6 +1006,24 @@ xgen_mm_series = {
     ),
 }
 
+qwen3_series = {
+    "Qwen3-4B": partial(
+        Qwen3,
+        model_path="Qwen/Qwen3-4B",
+        enable_thinking = False,
+    ),
+    "Qwen3-8B": partial(
+        Qwen3,
+        model_path="Qwen/Qwen3-8B",
+        enable_thinking = False,
+    ),
+    "Qwen3-14B": partial(
+        Qwen3,
+        model_path="Qwen/Qwen3-14B",
+        enable_thinking = False,
+    ),
+}
+
 qwen2vl_series = {
     "Qwen-VL-Max-0809": partial(
         Qwen2VLAPI,
@@ -1316,7 +1337,7 @@ supported_VLM = {}
 
 model_groups = [
     ungrouped, o1_apis, api_models, xtuner_series, qwen_series, llava_series,
-    internvl_series, yivl_series, xcomposer_series, minigpt4_series, 
+    internvl_series, yivl_series, xcomposer_series, minigpt4_series, qwen3_series,
     idefics_series, instructblip_series, deepseekvl_series, deepseekvl2_series, 
     janus_series, minicpm_series, cogvlm_series, wemm_series, cambrian_series, 
     chameleon_series, video_models, ovis_series, vila_series, mantis_series,

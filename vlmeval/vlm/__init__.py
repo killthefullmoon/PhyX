@@ -31,6 +31,7 @@ from .omnilmm import OmniLMM12B
 from .open_flamingo import OpenFlamingo
 from .pandagpt import PandaGPT
 from .qwen_vl import QwenVL, QwenVLChat
+from .qwen3 import Qwen3
 from .qwen2_vl import Qwen2VLChat
 from .transcore_m import TransCoreM
 from .visualglm import VisualGLM
