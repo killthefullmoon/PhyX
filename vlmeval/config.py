@@ -223,6 +223,13 @@ api_models = {
         retry=10,
         verbose=False,
     ),
+    'InternVL3': partial(
+        GPT4V,
+        model="internvl3-78b",
+        api_base="https://chat.intern-ai.org.cn/api/v1/chat/completions",
+        temperature=0,
+        retry=10,
+    ),
     # Gemini
     "GeminiPro1-0": partial(
         Gemini, model="gemini-1.0-pro", temperature=0, retry=10
