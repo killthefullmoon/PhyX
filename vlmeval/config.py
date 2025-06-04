@@ -223,9 +223,9 @@ api_models = {
         retry=10,
         verbose=False,
     ),
-    'InternVL3': partial(
+    'InternVL3-78B-API': partial(
         GPT4V,
-        model="internvl3-78b",
+        model="internvl3-78b-api",
         api_base="https://chat.intern-ai.org.cn/api/v1/chat/completions",
         temperature=0,
         retry=10,

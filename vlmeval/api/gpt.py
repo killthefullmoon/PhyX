@@ -84,8 +84,8 @@ class OpenAIWrapper(BaseAPI):
             env_key = os.environ.get('Deepseek_API', '')
             if key is None:
                 key = env_key
-        elif 'internvl3' in model:
-            env_key = os.environ.get('intern_API_KEY','')
+        elif 'internvl3-78b-api' in model:
+            env_key = os.environ.get('Intern_API_KEY','')
             if key is None:
                 key = env_key
         else:
