@@ -199,10 +199,13 @@ If you want to evaluate on LLM (i.e., in text only setting), please refer to exa
 To support your custion model, we would suggest to deploy your model as API and then add setting in the `vlmeval/config.py`. 
 It is also avaibale if your model is a tuned version of one supported model.
 
-Specifically, you need to add an extra dict for your own setting in `vlmeval/config.py`. 
+To add support for your models, you can refer to our commits:
 
+`VLM + API (via OpenAI)`: https://github.com/NastyMarcus/PhyX/commit/4a47eaf397abfe78f9ecaf0ecc2d7c91f08aa67e
+`LLM + Local Model`: https://github.com/NastyMarcus/PhyX/commit/c5b7ae15414660a5085548694d0d363563cd9561
+`LLM + API`: https://github.com/NastyMarcus/PhyX/commit/d66987f372d467dd4b7caed820eb58ec3e9a7c1e
 
-
+Please refer to [official guidance](https://github.com/open-compass/VLMEvalKit/blob/main/docs/zh-CN/Development.md#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%A8%A1%E5%9E%8B) for more details.
 
 
 After evaluation, results will be saved in the `outputs` folder.
