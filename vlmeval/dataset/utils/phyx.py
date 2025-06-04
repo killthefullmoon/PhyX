@@ -132,7 +132,7 @@ Please compare the these two answers, then ONLY output judegement 1/0 for matche
 def mapping_str(input):
     d = {"\dfrac": "\\frac", "\pi": "3.14"}
     output = input
-    for k,v  in d.items():
+    for k,v in d.items():
         try:
             output = output.replace(k, v)
         except:

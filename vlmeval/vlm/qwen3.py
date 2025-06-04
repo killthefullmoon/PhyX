@@ -9,7 +9,7 @@ import logging
 import torch
 
 from .base import BaseModel
-from ..smp import get_rank_and_world_size, get_gpu_memory, auto_split_flag, listinstr
+from ..smp import get_rank_and_world_size, get_gpu_memory
 
 
 def ensure_image_url(image: str) -> str:
@@ -104,17 +104,17 @@ class Qwen3(BaseModel):
         assert max_gpu_mem > 0
 
         # If only one process and GPU memory is less than 40GB
-        if auto_split_flag():
-            assert world_size == 1, 'Only support world_size == 1 when AUTO_SPLIT is set for non-72B Qwen2-VL'
-            # Will Use All GPUs to run one model
-            self.model = MODEL_CLS.from_pretrained(
-                model_path, torch_dtype='auto', device_map='auto', attn_implementation='flash_attention_2'
-            )
-        else:
-            self.model = MODEL_CLS.from_pretrained(
+        # if auto_split_flag():
+        #     assert world_size == 1, 'Only support world_size == 1 when AUTO_SPLIT is set for non-72B Qwen2-VL'
+        #     # Will Use All GPUs to run one model
+        #     self.model = MODEL_CLS.from_pretrained(
+        #         model_path, torch_dtype='auto', device_map='auto', attn_implementation='flash_attention_2'
+        #     )
+        # else:
+        self.model = MODEL_CLS.from_pretrained(
                 model_path, torch_dtype='auto', device_map='cpu', attn_implementation='flash_attention_2'
             )
-            self.model.cuda().eval()
+        self.model.cuda().eval()
 
         torch.cuda.empty_cache()
 
