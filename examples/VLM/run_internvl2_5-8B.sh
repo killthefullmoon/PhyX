@@ -11,7 +11,6 @@ python -u run.py --data PhyX_mini \
 
 
 export Deepseek_API=$Your_key
-export OPENAI_API_BASE="https://api.deepseek.com/v1/chat/completions"
 python -u run.py --data PhyX_mini \
     --model InternVL2_5-8B \
     --judge deepseek-v3 --judge-args '{"valid_type": "LLM"}'

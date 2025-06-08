@@ -170,7 +170,6 @@ python -u run.py --data PhyX_mini_SIMPLY \
 #*********official deepseek v3 as judger*********
 
 # export Deepseek_API=
-# export OPENAI_API_BASE="https://api.deepseek.com/v1/chat/completions"
 
 python -u run.py --data PhyX_mini_SIMPLY \
     --model GPT4o_20241120 \

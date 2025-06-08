@@ -5,6 +5,7 @@ from .base import BaseAPI
 
 APIBASES = {
     'OFFICIAL': 'https://api.openai.com/v1/chat/completions',
+    'DEEPSEEK': 'https://api.deepseek.com/v1/chat/completions'
 }
 
 
@@ -138,6 +139,8 @@ class OpenAIWrapper(BaseAPI):
                 if 'OPENAI_API_BASE' in os.environ and os.environ['OPENAI_API_BASE'] != '':
                     self.logger.info('Environment variable OPENAI_API_BASE is set. Will use it as api_base. ')
                     api_base = os.environ['OPENAI_API_BASE']
+                elif 'deepseek' in model:
+                    api_base = 'DEEPSEEK'
                 else:
                     api_base = 'OFFICIAL'
 
