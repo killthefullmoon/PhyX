@@ -31,6 +31,8 @@ For more details, please refer to the project page with **dataset exploration an
     - [📦 Dataset Versions](#-dataset-versions)
     - [Sample Format and Field Definitions](#sample-format-and-field-definitions)
     - [🔨 Evaluation on PhyX](#-evaluation-on-phyx)
+      - [VLMEvalKit (Official)](#vlmevalkit-official)
+      - [Code in this repository](#code-in-this-repository)
   - [✅ Cite](#-cite)
   - [❤️ Contributors](#️-contributors)
 
@@ -71,26 +73,26 @@ PhyX contains two subsets: `testmini` (1,000 questions) and `test` (3,000 questi
 
 | File Name                      | Type & Input Style                              | Description                                                                 |
 |-------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------|
-| `PhyX_mini.tsv`               | OE / Full-Text (Image + Full Description + Question)                               | Open-ended questions with full original description and image               |
-| `PhyX_mini_MC.tsv`            | MC / Full-Text (Image + Full Description + Question)                                 | Multiple-choice version with original description and image                 |
-| `PhyX_mini_SIMPLY.tsv`        | OE / Text-DeRedundancy (Image + Simplified Description + Question)                         | OE version with simplified description                                      |
-| `PhyX_mini_MC_SIMPLY.tsv`     | MC / Text-DeRedundancy (Image + Simplified Description + Question)                        | MC version with simplified description                                      |
-| `PhyX_mini_IMG.tsv`           | OE / Text-Minimal (Image + Question)                              | OE version with image only (description removed)                            |
-| `PhyX_mini_MC_IMG.tsv`        | MC / Text-Minimal (Image + Question)                             | MC version with image only                                                  |
-| `PhyX_mini_TL.tsv`            | OE / Full-Text (Image Caption + Full Description + Question) | OE version with image converted to text (`image_caption`)                   |
-| `PhyX_mini_TL_MC.tsv`         | MC / Full-Text (Image Caption + Full Description + Question) | MC version with image converted to text                                     |
-| `PhyX_mini_TL_SIMPLY.tsv`     | OE / Text-DeRedundancy (Image Caption + Simplified Description + Question)                         | OE version with image caption and simplified description                    |
-| `PhyX_mini_TL_MC_SIMPLY.tsv`  | MC / Text-DeRedundancy (Image Caption + Simplified Description + Question)                         | MC version with image caption and simplified description                    |
-| `PhyX_mini_TL_IMG.tsv`        | OE / Text-Minimal (Image Caption + Question)                              | OE version with image caption only (no description)                         |
-| `PhyX_mini_TL_MC_IMG.tsv`     | MC / Text-Minimal (Image Caption + Question)                              | MC version with image caption only (no description)                         |
-| **Default Setting**           | ✅ Text-DeRedundancy (MC & OE)                  | `PhyX_mini_SIMPLY.tsv` (OE) and `PhyX_mini_MC_SIMPLY.tsv` (MC) are default. |
+| `PhyX_mini_OE.tsv`        | OE / Text-DeRedundancy (Image + Simplified Description + Question)                         | OE version with simplified description                                      |
+| `PhyX_mini_MC.tsv`     | MC / Text-DeRedundancy (Image + Simplified Description + Question)                        | MC version with simplified description                                      |
+| `PhyX_mini_OE_FT.tsv`               | OE / Full-Text (Image + Full Description + Question)                               | Open-ended questions with full original description and image               |
+| `PhyX_mini_MC_FT.tsv`            | MC / Full-Text (Image + Full Description + Question)                                 | Multiple-choice version with original description and image                 |
+| `PhyX_mini_OE_TM.tsv`           | OE / Text-Minimal (Image + Question)                              | OE version with image only (description removed)                            |
+| `PhyX_mini_MC_TM.tsv`        | MC / Text-Minimal (Image + Question)                             | MC version with image only                                                  |
+| `PhyX_mini_TL_OE.tsv`     | OE / Text-DeRedundancy (Image Caption + Simplified Description + Question)                         | OE version with image caption and simplified description                    |
+| `PhyX_mini_TL_MC.tsv`  | MC / Text-DeRedundancy (Image Caption + Simplified Description + Question)                         | MC version with image caption and simplified description                    |
+| `PhyX_mini_TL_OE_FT.tsv`            | OE / Full-Text (Image Caption + Full Description + Question) | OE version with image converted to text (`image_caption`)                   |
+| `PhyX_mini_TL_MC_FT.tsv`         | MC / Full-Text (Image Caption + Full Description + Question) | MC version with image converted to text                                     |
+| `PhyX_mini_TL_OE_TM.tsv`        | OE / Text-Minimal (Image Caption + Question)                              | OE version with image caption only (no description)                         |
+| `PhyX_mini_TL_MC_TM.tsv`     | MC / Text-Minimal (Image Caption + Question)                              | MC version with image caption only (no description)                         |
+| **Default Setting**           | ✅ Text-DeRedundancy (MC & OE)                  | `PhyX_mini_OE.tsv` and `PhyX_mini_MC.tsv` are default. |
 
-- 🔍 mini stands for the 1,000-questions testmini set; the full version with 3,000 samples will be released soon.
+- 🔍 mini stands for the 1,000-questions testmini set.
 - MC: multiple-choice
-- no MC: open-ended (OE)
-- SIMPLY: simplified descriptions
+- OE: open-ended (OE)
 - TL: text-only (image converted to image_caption)
-- IMG: description removed (image + question, without description)
+- FT: full-text (image + full description + Question)
+- TM: description removed (image + question, without description)
 
 ### Sample Format and Field Definitions
 📘 Each entry in PhyX is stored as a JSON object with the following fields:
