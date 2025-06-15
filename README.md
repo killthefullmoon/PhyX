@@ -130,13 +130,13 @@ For a quick start, just use:
 
 ```
 #*********judge based on rules*********
-python -u run.py --data PhyX_mini_SIMPLY \
+python -u run.py --data PhyX_mini_MC \
   --model GPT4o_20241120 \
   --judge-args '{"valid_type": "STR"}'
 
 
 #*********deepseek v3 from siliconflow as judger*********
-python -u run.py --data PhyX_mini_SIMPLY \
+python -u run.py --data PhyX_mini_MC \
   --model GPT4o_20241120 \
   --judge deepseek --judge-args '{"valid_type": "LLM"}'
 ```
@@ -233,6 +233,6 @@ If you find **PhyX** useful for your research and applications, please kindly ci
 
 ## ❤️ Contributors
 
-> *Hui Shen`<sup>`1, 2`</sup>`, Taiqiang Wu`<sup>`1`</sup>`, Qi Han`<sup>`3`</sup>`, Yunta Hsieh`<sup>`2`</sup>`, Jizhou Wang`<sup>`4`</sup>`, Yuyue Zhang`<sup>`3`</sup>`, Yuxin Cheng`<sup>`1`</sup>`, Zijian Hao`<sup>`3`</sup>`, Yuansheng Ni`<sup>`5`</sup>`, Xin Wang`<sup>`6`</sup>`, Zhongwei Wan`<sup>`6`</sup>`, Kai Zhang`<sup>`6`</sup>`, Wendong Xu`<sup>`1`</sup>`, Jing Xiong`<sup>`1`</sup>`, Ping Luo`<sup>`1`</sup>`, Wenhu Chen`<sup>`5`</sup>`, Chaofan Tao`<sup>`1`</sup>`, Z. Morley Mao`<sup>`2`</sup>`, Ngai Wong`<sup>`1`</sup>`.*
+> *Hui Shen `<sup>`1, 2 `</sup>`, Taiqiang Wu `<sup>`1 `</sup>`, Qi Han `<sup>`3 `</sup>`, Yunta Hsieh `<sup>`2 `</sup>`, Jizhou Wang `<sup>`4 `</sup>`, Yuyue Zhang `<sup>`3 `</sup>`, Yuxin Cheng `<sup>`1 `</sup>`, Zijian Hao `<sup>`3 `</sup>`, Yuansheng Ni `<sup>`5 `</sup>`, Xin Wang `<sup>`6 `</sup>`, Zhongwei Wan `<sup>`6 `</sup>`, Kai Zhang `<sup>`6 `</sup>`, Wendong Xu `<sup>`1 `</sup>`, Jing Xiong `<sup>`1 `</sup>`, Ping Luo `<sup>`1 `</sup>`, Wenhu Chen `<sup>`5 `</sup>`, Chaofan Tao `<sup>`1 `</sup>`, Z. Morley Mao `<sup>`2 `</sup>`, Ngai Wong `<sup>`1 `</sup>`.*
 
-> *`<sup>`1`</sup>`The University of Hong Kong, `<sup>`2`</sup>`University of Michigan, `<sup>`3`</sup>`Independent, `<sup>`4`</sup>`University of Toronto, `<sup>`5`</sup>`University of Waterloo, `<sup>`6`</sup>`The Ohio State University.*
+> *`<sup>`1 `</sup>`The University of Hong Kong, `<sup>`2 `</sup>`University of Michigan, `<sup>`3 `</sup>`Independent, `<sup>`4 `</sup>`University of Toronto, `<sup>`5 `</sup>`University of Waterloo, `<sup>`6 `</sup>`The Ohio State University.*
