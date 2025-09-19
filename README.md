@@ -151,7 +151,6 @@ Please follow the official guidance to create a pip/conda environment.
 For a quick start, just use:
 
 ```
-#*********judge based on rules*********
 python3 -m lmms_eval \
     --model openai_compatible \
     --model_args model_version=gpt-4o-2024-11-20,azure_openai=False \
