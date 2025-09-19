@@ -142,6 +142,30 @@ python -u run.py --data PhyX_mini_MC \
   --judge deepseek --judge-args '{"valid_type": "LLM"}'
 ```
 
+#### llms-eval (Official)
+
+PhyX is officially supported by [llms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval).
+You can use the official code at https://github.com/EvolvingLMMs-Lab/lmms-eval.
+Please follow the official guidance to create a pip/conda environment.
+
+For a quick start, just use:
+
+```
+#*********judge based on rules*********
+python3 -m lmms_eval \
+    --model openai_compatible \
+    --model_args model_version=gpt-4o-2024-11-20,azure_openai=False \
+    --tasks phyx_mini_mc \
+    --batch_size 1 \
+    --output_path $Your_PATH
+```
+
+The `Task` can be one of `phyx_mc`, `phyx_oe`, `phyx_mini_mc`, and `phyx_mini_oe`.
+`mc` denotes multiple-choice, `oe` for open-ended question. There are 3000 samples, while `mini` is for the mini version with 1000 samples.
+
+After inference, you can set `quick_extract` to be false or true. True denotes judging by rules, while False denotes llm-as-judge. Default value is False. We are using official Deepseek-V3 as the default judger. Please remember to set env variable `Deepseek_API`.
+
+
 #### Code in this repository
 
 Also, in this repository, we implement more evaluation settings. The evaluation codes are based on [VLMEvalKit](https://github.com/open-compass/VLMEvalKit), and we thank the authors for their efforts.
