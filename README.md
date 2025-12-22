@@ -40,9 +40,9 @@ For more details, please refer to the project page with **dataset exploration an
 
 ## 🔔 News
 
-- **[2025.12.17]** 🎉 [Step-GUI](https://arxiv.org/pdf/2512.15431) technical report released and outperforms Qwen3-VL-30B-A3B with 10.0% on PhyX, congratulation!
+- **[2025.12.17]** 🎉 The [Step-GUI](https://arxiv.org/pdf/2512.15431) technical report has been released and it outperforms Qwen3-VL-30B-A3B by 10.0% on PhyX. Congratulations!
 - **[2025.07.21]** 🎉 PhyX is officially supported by [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for easy evalution.
-- **[2025.07.10]** 🎉 [Skywork-R1V3](https://arxiv.org/pdf/2507.06167) technical report released and outperforms Qwen2.5-VL-72B with 8.0% on PhyX, congratulation!
+- **[2025.07.10]** 🎉 The [Skywork-R1V3](https://arxiv.org/pdf/2507.06167) technical report has been released and it outperforms Qwen2.5-VL-72B by 8.0% on PhyX, congratulation!
 - **[2025.05.27]** 🎉 PhyX is officially supported by [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) for easy evalution.
 - **[2025.05.23]** 🚀 The [arXiv paper](https://arxiv.org/abs/2505.15929) is online!
 - **[2025.05.21]** 🚀 We release the testmini set of PhyX at [Huggingface](https://huggingface.co/datasets/Cloudriver/PhyX) and the [evaluation code](https://github.com/NastyMarcus/PhyX)!
