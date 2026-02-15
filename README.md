@@ -39,7 +39,7 @@ For more details, please refer to the project page with **dataset exploration an
   - [❤️ Contributors](#️-contributors)
 
 ## 🔔 News
-- **[2026.2.15]** 🎉 The [Seed 2.0](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf) technical report has been released and it outperforms GPT-5.2-High by 0.6% on PhyX, congratulations!
+- **[2026.02.15]** 🎉 The [Seed 2.0](https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf) technical report has been released and it outperforms GPT-5.2-High by 0.6% on PhyX, congratulations!
 - **[2025.12.17]** 🎉 The [Step-GUI](https://arxiv.org/pdf/2512.15431) technical report has been released and it outperforms Qwen3-VL-30B-A3B by 10.0% on PhyX, congratulations!
 - **[2025.07.21]** 🎉 PhyX is officially supported by [lmms-eval](https://github.com/EvolvingLMMs-Lab/lmms-eval) for easy evalution.
 - **[2025.07.10]** 🎉 The [Skywork-R1V3](https://arxiv.org/pdf/2507.06167) technical report has been released and it outperforms Qwen2.5-VL-72B by 8.0% on PhyX, congratulation!
